@@ -12,6 +12,7 @@ class Square {
         this.div.style.top = `${y}px`;
         this.updateColor();
         container.appendChild(this.div);
+        console.log ('true');
 
     }
 
@@ -25,6 +26,7 @@ class Square {
 }
 let sqButton = document.getElementById('square-button');
 sqButton.addEventListener('click', insertSquare);
+console.log('true again');
 
 function insertSquare() {
     let xVal = randomVal(0, MAX);
@@ -34,6 +36,6 @@ function insertSquare() {
 }
 
 function randomVal(min, max) {
-    return Math.floor(Math.random() + (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 
 }
